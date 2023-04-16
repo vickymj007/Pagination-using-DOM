@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Delicious+Handrawn&family=Poppins:wght@400;500;700;800&family=Quicksand:wght@400;500;600&family=Righteous&family=Sedgwick+Ave+Display&family=Ubuntu:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+body {
+    background : linear-gradient(120deg, #2d388a, #00aeef) no-repeat;
+    min-height: 100vh;
+    min-width: 280px;
+}
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+.wrapper {
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 15px;
+    box-shadow: 0 0 18px rgba(0, 0, 0, .5);
+    padding: 20px;
+    border-radius: 10px;
+}
+.card {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #0a3d6d;
+}
+.card h2 {
+    font-size: 20px;
+    color: #fff;
+}
+.card p {
+    font-size: 15px;
+    color: #adadad;
+} 
+.container h1 {
+    font-size: 46px;
+    text-align: center;
+    color: #fff;
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    background: #013d8c;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+    padding: 5px;
+    border-radius: 50px;
+    margin-bottom: 50px;
+    margin: 0 auto 50px auto; 
+}
+#buttons a {
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 35px;
+    transition: .3s ease-in-out;
+    margin: 0 5px;
+}
+.control {
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 35px;
+    transition: .3s ease-in-out;
+}
+.disabled {
+    color: rgba(12, 16, 41, 0.5);
+    cursor: default;
+}
+.control:not(.disabled):hover, .page-numbers a:hover {
+    background-color: rgb(9, 9, 75);
+    color: #fff;
+}
+a.active {
+    background-color: rgb(9, 9, 75);
+    color: #fff;
+}
+.hidden {
+    display: none;
+}
+#description{
+    color: #fff;
+    text-align: center;
+}
+
+
+
+@media screen and (max-width:920px){
+    .container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:673px){
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .wrapper {
+        gap: 8px;
+        padding: 10px;
+    }
+    #buttons{
+        gap: 0;
+        align-items: end;
+        padding: 5px;
+    }
+    #buttons a {
+        padding: 2px 6px;
+        font-size: 10px;
+        border-radius: 35px;
+        margin: 0 2px;
+    }
+    .control {
+        font-size: 10px;
+        padding: 2px 6px;
+        border-radius: 35px;
+    }
+}
+@media screen and (max-width:400px){
+    .card h2 {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .card p {
+        font-size: 10px;
+    } 
+    .container h1 {
+        font-size: 36px;
+    }
+    .wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    #description{
+        font-size: 10px;
+    }
+}
